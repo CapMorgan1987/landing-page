@@ -4,6 +4,8 @@
 		<app-hero />
 		<app-services />
 		<app-phone />
+		<app-mail />
+		<app-phone />
 	</div>
 </template>
 
@@ -12,6 +14,7 @@
 	import Hero from "./components/Hero.vue";
 	import Services from "./components/Services.vue";
 	import Phone from "./components/Phone.vue";
+	import Mail from "./components/Mail.vue";
 
 	export default {
 		name: "App",
@@ -20,6 +23,7 @@
 			"app-hero": Hero,
 			"app-services": Services,
 			"app-phone": Phone,
+			"app-mail": Mail,
 		},
 	};
 </script>
