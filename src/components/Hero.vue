@@ -8,7 +8,7 @@
 					<h1 class="is-size-3-tablet is-size-2-mobile has-text-white">Indirizzo: Via Sa Narba 62,</h1>
 					<h1 class="is-size-3-tablet is-size-2-mobile has-text-weight-semibold arena-green">Elmas (CA) – SARDEGNA</h1>
 				</div>
-				<div class="column ">
+				<div class="column is-half-fullhd">
 					<b-image
 						:src="require('@/assets/img/naslovna.webp')"
 						:webp-fallback="require('@/assets/img/naslovna.jpg')"
