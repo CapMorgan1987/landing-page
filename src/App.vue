@@ -1,17 +1,17 @@
 <template>
 	<div id="app">
-		<HelloWorld />
+		<app-header />
 
 	</div>
 </template>
 
 <script>
-	import HelloWorld from "./components/HelloWorld.vue";
+	import Header from "./components/Header.vue";
 
 	export default {
 		name: "App",
 		components: {
-			HelloWorld,
+			"app-header": Header,
 		},
 	};
 </script>
