@@ -11,8 +11,8 @@
 							<section>
 								<div>
 									<b-image
-										:src="`require('@/assets/img/${s.webp}')`"
-										:webp-fallback="`require('@/assets/img/${s.jpg}')`"
+										:src="require(`@/assets/img/${s.webp}`)"
+										:webp-fallback="require(`@/assets/img/${s.jpg}`)"
 									></b-image>
 								</div>
 							</section>
