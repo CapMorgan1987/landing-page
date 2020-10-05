@@ -6,6 +6,9 @@
 		<app-phone />
 		<app-mail />
 		<app-phone />
+		<app-slider />
+		<app-banner />
+		<app-transport />
 	</div>
 </template>
 
@@ -15,6 +18,9 @@
 	import Services from "./components/Services.vue";
 	import Phone from "./components/Phone.vue";
 	import Mail from "./components/Mail.vue";
+	import Slider from "./components/Slider.vue";
+	import Banner from "./components/Banner.vue";
+	import Transport from "./components/Transport.vue";
 
 	export default {
 		name: "App",
@@ -24,6 +30,9 @@
 			"app-services": Services,
 			"app-phone": Phone,
 			"app-mail": Mail,
+			"app-slider": Slider,
+			"app-banner": Banner,
+			"app-transport": Transport,
 		},
 	};
 </script>
