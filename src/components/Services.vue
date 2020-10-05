@@ -28,7 +28,7 @@
 					</div>
 				</div>
 				<div class="column  is-one-third-desktop px-5">
-					<div class="table-container">
+					<div class="table-container mb-6">
 						<table class="table is-striped is-bordered is-fullwidth">
 							<thead>
 								<tr>
@@ -55,6 +55,13 @@
 								</tr>
 							</tbody>
 						</table>
+					</div>
+					<div>
+						<b-image
+							class="img-services"
+							:src="require('@/assets/img/garanzia.webp')"
+							:webp-fallback="require('@/assets/img/garanzia.png')"
+						></b-image>
 					</div>
 				</div>
 				<div class="column  is-one-third-desktop px-5">

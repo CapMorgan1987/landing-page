@@ -4,7 +4,22 @@
 			<div class="columns is-vcentered is-desktop">
 				<div class="column is-half-desktop">
 					<b-carousel>
-						<b-carousel-item>
+						<b-carousel-item
+							v-for="(s, i) in slider"
+							:key="i"
+						>
+							<section>
+								<div>
+									<b-image
+										:src="`require('@/assets/img/${s.webp}')`"
+										:webp-fallback="`require('@/assets/img/${s.jpg}')`"
+									></b-image>
+								</div>
+							</section>
+						</b-carousel-item>
+					</b-carousel>
+					<!-- <b-carousel>
+						<b-carousel-item> >
 							<section>
 								<div>
 									<b-image
@@ -14,27 +29,7 @@
 								</div>
 							</section>
 						</b-carousel-item>
-						<b-carousel-item>
-							<section>
-								<div>
-									<b-image
-										:src="require('@/assets/img/slider_2.webp')"
-										:webp-fallback="require('@/assets/img/slider_2.jpg')"
-									></b-image>
-								</div>
-							</section>
-						</b-carousel-item>
-						<b-carousel-item>
-							<section>
-								<div>
-									<b-image
-										:src="require('@/assets/img/slider_3.webp')"
-										:webp-fallback="require('@/assets/img/slider_3.jpg')"
-									></b-image>
-								</div>
-							</section>
-						</b-carousel-item>
-					</b-carousel>
+					</b-carousel> -->
 				</div>
 				<div class="column is-half-desktop px-5 py-5">
 					<h2 class="is-size-4-tablet is-size-3-mobile has-text-weight-medium my-2">
@@ -57,7 +52,17 @@
 </template>
 
 <script>
-	export default {};
+	export default {
+		data() {
+			return {
+				slider: [
+					{ webp: "slider_1.webp", jpg: "slider_1.jpg" },
+					{ webp: "slider_2.webp", jpg: "slider_2.jpg" },
+					{ webp: "slider_3.webp", jpg: "slider_3.jpg" },
+				],
+			};
+		},
+	};
 </script>
 
 <style scoped>
