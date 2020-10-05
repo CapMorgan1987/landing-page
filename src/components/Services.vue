@@ -3,27 +3,20 @@
 		<div class="container">
 			<div class="columns is-vcentered is-desktop">
 				<div class="column  is-one-third-desktop px-5">
-					<div class="mb-6">
+					<div
+						v-for="(service, i) in service1"
+						:key="i"
+						class="mb-6"
+					>
 						<h2 class="is-size-4-tablet is-size-3-mobile has-text-weight-medium my-2">
-							PROCEDURA ALL-ON-6
+							{{ service.title }}
 						</h2>
-						<p class="mb-2">Il metodo ALL-ON-6 è una moderna procedura odontoiatrica dell’inserimento di 6 impianti su cui poggia il lavoro protesico (corone dentali singole o ponti). Soddisfa pienamente tutte le esigenze estetiche e funzionali.</p>
+						<p class="mb-2">{{ service.text }}</p>
+						<p class="mb-2">{{ service.text2 }}</p>
 						<b-image
 							class="img-services"
-							:src="require('@/assets/img/all-on-6.webp')"
-							:webp-fallback="require('@/assets/img/all-on-6.png')"
-						></b-image>
-					</div>
-					<div class="mb-6">
-						<h2 class="is-size-4-tablet is-size-3-mobile has-text-weight-medium my-2">
-							IMPLANTOLOGIA
-						</h2>
-						<p class="mb-2">L’implantologia è la branca dell’odontoiatria che si occupa di inserimento di impianti dentali. Questo è il più moderno metodo usato per risolvere problemi di mancanza di uno o più denti.</p>
-						<p>Gli impianti dentali sostituiscono la radice del dente e in combinazione con il lavoro protesico ripristinano la funzione fonetica e estetica del dente.</p>
-						<b-image
-							class="img-services"
-							:src="require('@/assets/img/implantati.webp')"
-							:webp-fallback="require('@/assets/img/implantati.png')"
+							:src="require(`@/assets/img/${service.webp}`)"
+							:webp-fallback="require(`@/assets/img/${service.png}`)"
 						></b-image>
 					</div>
 				</div>
@@ -65,28 +58,20 @@
 					</div>
 				</div>
 				<div class="column  is-one-third-desktop px-5">
-					<div class="mb-6">
+					<div
+						v-for="(service, i) in service2"
+						:key="i"
+						class="mb-6"
+					>
 						<h2 class="is-size-4-tablet is-size-3-mobile has-text-weight-medium my-2">
-							IMPIANTI DENTALI
+							{{ service.title }}
 						</h2>
-						<p>Impianti dentali sono elaborati in titanio, il materiale biocompatibile che l’osso accetta come un materiale naturale.</p>
-						<p class="mb-2">Un impianto dentale rappresenta la soluzione ideale per le persone alle quali mancano uno o più denti, perché i denti adiacenti e sani non devono essere limati, ma restano intatti.</p>
+						<p class="mb-2">{{ service.text }}</p>
+						<p class="mb-2">{{ service.text2 }}</p>
 						<b-image
 							class="img-services"
-							:src="require('@/assets/img/implantat.webp')"
-							:webp-fallback="require('@/assets/img/implantat.png')"
-						></b-image>
-					</div>
-					<div class="mb-6">
-						<h2 class="is-size-4-tablet is-size-3-mobile has-text-weight-medium my-2">
-							CORONE DENTALI
-						</h2>
-						<p>Le corone dentali in ceramica sono dei surrogati che vengono permanentemente fissati su denti limati o su impianti con lo scopo di ricostruire i denti.</p>
-						<p class="mb-2">Vengono realizzate quando i denti sono talmente compromessi che otturazioni sono impossibili, quando i denti sono indeboliti da carie o cure canalari o sempicemente quando l’esistente manufatto dentale si è consumato.</p>
-						<b-image
-							class="img-services"
-							:src="require('@/assets/img/krunica.webp')"
-							:webp-fallback="require('@/assets/img/krunica.jpg')"
+							:src="require(`@/assets/img/${service.webp}`)"
+							:webp-fallback="require(`@/assets/img/${service.png}`)"
 						></b-image>
 					</div>
 				</div>
@@ -96,7 +81,50 @@
 </template>
 
 <script>
-	export default {};
+	export default {
+		data() {
+			return {
+				service1: [
+					{
+						title: "PROCEDURA ALL-ON-6",
+						text:
+							"Il metodo ALL-ON-6 è una moderna procedura odontoiatrica dell’inserimento di 6 impianti su cui poggia il lavoro protesico (corone dentali singole o ponti). Soddisfa pienamente tutte le esigenze estetiche e funzionali.",
+						webp: "all-on-6.webp",
+						png: "all-on-6.png",
+					},
+					{
+						title: "IMPLANTOLOGIA",
+						text:
+							"L’implantologia è la branca dell’odontoiatria che si occupa di inserimento di impianti dentali.",
+						text2:
+							"Questo è il più moderno metodo usato per risolvere problemi di mancanza di uno o più denti. Gli impianti dentali sostituiscono la radice del dente e in combinazione con il lavoro protesico ripristinano la funzione fonetica e estetica del dente.",
+						webp: "implantati.webp",
+						png: "implantati.png",
+					},
+				],
+				service2: [
+					{
+						title: "IMPIANTI DENTALI",
+						text:
+							"Impianti dentali sono elaborati in titanio, il materiale biocompatibile che l’osso accetta come un materiale naturale.",
+						text2:
+							"Un impianto dentale rappresenta la soluzione ideale per le persone alle quali mancano uno o più denti, perché i denti adiacenti e sani non devono essere limati, ma restano intatti.",
+						webp: "implantat.webp",
+						png: "implantat.png",
+					},
+					{
+						title: "CORONE DENTALI",
+						text:
+							"Le corone dentali in ceramica sono dei surrogati che vengono permanentemente fissati su denti limati o su impianti con lo scopo di ricostruire i denti.",
+						text2:
+							"Vengono realizzate quando i denti sono talmente compromessi che otturazioni sono impossibili, quando i denti sono indeboliti da carie o cure canalari o sempicemente quando l’esistente manufatto dentale si è consumato.",
+						webp: "krunica.webp",
+						png: "krunica.jpg",
+					},
+				],
+			};
+		},
+	};
 </script>
 
 <style scoped>

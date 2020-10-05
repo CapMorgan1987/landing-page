@@ -18,18 +18,6 @@
 							</section>
 						</b-carousel-item>
 					</b-carousel>
-					<!-- <b-carousel>
-						<b-carousel-item> >
-							<section>
-								<div>
-									<b-image
-										:src="require('@/assets/img/slider_1.webp')"
-										:webp-fallback="require('@/assets/img/slider_1.jpg')"
-									></b-image>
-								</div>
-							</section>
-						</b-carousel-item>
-					</b-carousel> -->
 				</div>
 				<div class="column is-half-desktop px-5 py-5">
 					<h2 class="is-size-4-tablet is-size-3-mobile has-text-weight-medium my-2">
