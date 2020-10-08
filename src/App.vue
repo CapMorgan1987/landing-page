@@ -38,8 +38,13 @@
 </script>
 
 <style>
-	.black-background {
-		background-color: #010101;
+	body {
+		font-family: "Montserrat";
+		color: #58585b;
+	}
+
+	.font400 {
+		font-weight: 400;
 	}
 
 	.arena-background {
@@ -54,11 +59,12 @@
 	.btn-arena {
 		background-color: #8bc63f !important;
 		color: white !important;
-		border: 1px solid white !important;
+		border: 2px solid white !important;
+		transition-duration: 500ms;
 	}
 	.btn-arena:hover {
 		background-color: white !important;
 		color: #8bc63f !important;
-		border: 1px solid #8bc63f !important;
+		border: 2px solid #8bc63f !important;
 	}
 </style>
