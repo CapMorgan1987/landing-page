@@ -1,10 +1,12 @@
 <template>
-	<section class="black-background py-3 px-3">
-		<b-image
-			class="img-header"
-			:src="require('@/assets/img/logo.webp')"
-			:webp-fallback="require('@/assets/img/logo.png')"
-		></b-image>
+	<section class="py-3 px-3 bg-color">
+		<div class="container">
+			<b-image
+				class="img-header"
+				:src="require('@/assets/img-new/logo.webp')"
+				:webp-fallback="require('@/assets/img-new/logo.png')"
+			></b-image>
+		</div>
 	</section>
 </template>
 
@@ -13,6 +15,10 @@
 </script>
 
 <style scoped>
+	.bg-color {
+		background-color: #eef2f5;
+	}
+
 	.img-header {
 		max-width: 200px;
 	}
