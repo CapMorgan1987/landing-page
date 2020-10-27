@@ -20,7 +20,7 @@
 	}
 
 	.img-header {
-		max-width: 200px;
+		width: 200px;
 	}
 
 	@media screen and (max-width: 769px) {
