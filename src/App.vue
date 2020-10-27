@@ -53,9 +53,14 @@
 	.arena-background-light {
 		background-color: #8bc63fcb;
 	}
-	.arena-green {
+	.text-green {
 		color: #8bc63f;
 	}
+
+	.text-white {
+		color: white;
+	}
+
 	.btn-arena {
 		background-color: #8bc63f !important;
 		color: white !important;

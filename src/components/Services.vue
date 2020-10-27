@@ -1,41 +1,36 @@
 <template>
-	<section class=" px-5">
+	<section class=" px-5 arena-background text-white">
 		<div class="container">
-			<div class="columns is-vcentered is-desktop">
+			<div class="column px-5">
+				<h2 class="is-size-2 is-size-3-touch has-text-centered">{{ serviceTitle }}</h2>
+			</div>
+			<div class="separator"></div>
+			<p class="has-text-centered mb-3">{{ serviceDescr }}</p>
+			<div class="columns is-desktop mt-4">
 				<div class="column  is-one-half-desktop px-5">
+					<div>
+						<h3 class="is-size-5 has-text-weight-bold">Prednosti:</h3>
+					</div>
 					<div
-						v-for="(service, i) in service1"
+						v-for="(prednost, i) in prednosti"
 						:key="i"
-						class="mb-6"
 					>
-						<h2 class="is-size-4-tablet is-size-3-mobile has-text-weight-medium my-2">
-							{{ service.title }}
-						</h2>
-						<p class="mb-2">{{ service.text }}</p>
-						<p class="mb-2">{{ service.text2 }}</p>
-						<b-image
-							class="img-services"
-							:src="require(`@/assets/img/${service.webp}`)"
-							:webp-fallback="require(`@/assets/img/${service.png}`)"
-						></b-image>
+						<p>
+							- {{ prednost }}
+						</p>
 					</div>
 				</div>
 				<div class="column  is-one-half-desktop px-5">
+					<div>
+						<h3 class="is-size-5 has-text-weight-bold">Postupak terapije:</h3>
+					</div>
 					<div
-						v-for="(service, i) in service2"
+						v-for="(postupak, i) in postupakTerapije"
 						:key="i"
-						class="mb-6"
 					>
-						<h2 class="is-size-4-tablet is-size-3-mobile has-text-weight-medium my-2">
-							{{ service.title }}
-						</h2>
-						<p class="mb-2">{{ service.text }}</p>
-						<p class="mb-2">{{ service.text2 }}</p>
-						<b-image
-							class="img-services"
-							:src="require(`@/assets/img/${service.webp}`)"
-							:webp-fallback="require(`@/assets/img/${service.png}`)"
-						></b-image>
+						<p>
+							- {{ postupak }}
+						</p>
 					</div>
 				</div>
 			</div>
@@ -47,43 +42,21 @@
 	export default {
 		data() {
 			return {
-				service1: [
-					{
-						title: "PROCEDURA ALL-ON-6",
-						text:
-							"Il metodo ALL-ON-6 è una moderna procedura odontoiatrica dell’inserimento di 6 impianti su cui poggia il lavoro protesico (corone dentali singole o ponti). Soddisfa pienamente tutte le esigenze estetiche e funzionali.",
-						webp: "all-on-6.webp",
-						png: "all-on-6.png",
-					},
-					{
-						title: "IMPLANTOLOGIA",
-						text:
-							"L’implantologia è la branca dell’odontoiatria che si occupa di inserimento di impianti dentali.",
-						text2:
-							"Questo è il più moderno metodo usato per risolvere problemi di mancanza di uno o più denti. Gli impianti dentali sostituiscono la radice del dente e in combinazione con il lavoro protesico ripristinano la funzione fonetica e estetica del dente.",
-						webp: "implantati.webp",
-						png: "implantati.png",
-					},
+				serviceTitle: "POLUFIKSNA PROTEZA NA IMPLANTATIMA",
+				serviceDescr:
+					"Moderna stomatologija nudi polu-fiksno protetsko rješenje kao što je „proteza na prečku“, odnosno, protezu koja dolazi bez nepca, a postavlja se na četiri zubna implantata. Ovo je idealno rješenje za pacijente koji žele zauvijek riješiti problem bezubosti i u potpunosti vratiti funkcionalnost i estetiku svog osmijeha, a žele doživotno rješenje.",
+				prednosti: [
+					"dolazi bez nepca",
+					"zaustavlja gubitak kosti",
+					"nema straha od ispadanja",
+					"u potpunosti vraća funkciju žvakanja",
+					"po potrebi se skida radi održavanja oralne higijene",
 				],
-				service2: [
-					{
-						title: "IMPIANTI DENTALI",
-						text:
-							"Impianti dentali sono elaborati in titanio, il materiale biocompatibile che l’osso accetta come un materiale naturale.",
-						text2:
-							"Un impianto dentale rappresenta la soluzione ideale per le persone alle quali mancano uno o più denti, perché i denti adiacenti e sani non devono essere limati, ma restano intatti.",
-						webp: "implantat.webp",
-						png: "implantat.png",
-					},
-					{
-						title: "CORONE DENTALI",
-						text:
-							"Le corone dentali in ceramica sono dei surrogati che vengono permanentemente fissati su denti limati o su impianti con lo scopo di ricostruire i denti.",
-						text2:
-							"Vengono realizzate quando i denti sono talmente compromessi che otturazioni sono impossibili, quando i denti sono indeboliti da carie o cure canalari o sempicemente quando l’esistente manufatto dentale si è consumato.",
-						webp: "krunica.webp",
-						png: "krunica.jpg",
-					},
+				postupakTerapije: [
+					"u prvoj posjeti se ugrađuju četiri implantata",
+					"pacijent dobiva privremenu protezu dok čeka da implantati srastu s kosti (oseointegracija)",
+					"nakon što implantati zarastu (3-4 mjeseca), uzima se otisak za finalnu protezu",
+					"unutar 48 sati, pacijent dolazi na probu rada kako bi se utvrdilo odgovara li pacijentu te, ako je sve u redu, ugovara se finalna posjeta u kojoj se proteza postavlja na ugrađene implantate i pacijent odlazi kući s novim osmijehom",
 				],
 			};
 		},
@@ -91,9 +64,13 @@
 </script>
 
 <style scoped>
-	.img-services {
-		max-width: 300px;
+	.separator {
+		width: 42px;
+		height: 3px;
+		background-color: white;
 		margin-left: auto;
 		margin-right: auto;
+		margin-top: 20px;
+		margin-bottom: 20px;
 	}
 </style>
