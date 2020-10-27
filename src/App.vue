@@ -38,8 +38,9 @@
 
 <style>
 	body {
-		font-family: "Montserrat";
+		font-family: "Montserrat", sans-serif !important;
 		color: #58585b;
+		line-height: 1.6;
 	}
 
 	.font400 {
