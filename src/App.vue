@@ -3,7 +3,6 @@
 		<app-header />
 		<app-hero />
 		<app-services />
-		<app-phone />
 		<app-mail />
 		<app-phone />
 		<app-slider />

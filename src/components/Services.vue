@@ -1,5 +1,5 @@
 <template>
-	<section class=" px-5 arena-background text-white">
+	<section class=" px-5 pb-5 arena-background text-white">
 		<div class="container">
 			<div class="column px-5">
 				<h2 class="is-size-2 is-size-3-touch has-text-centered">{{ serviceTitle }}</h2>
