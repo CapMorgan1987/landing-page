@@ -3,6 +3,7 @@
 		<app-header />
 		<app-hero />
 		<app-services />
+		<app-payments />
 		<app-mail />
 		<app-phone />
 		<app-slider />
@@ -15,6 +16,7 @@
 	import Header from "./components/Header.vue";
 	import Hero from "./components/Hero.vue";
 	import Services from "./components/Services.vue";
+	import Payments from "./components/Payments.vue";
 	import Phone from "./components/Phone.vue";
 	import Mail from "./components/Mail.vue";
 	import Slider from "./components/Slider.vue";
@@ -27,6 +29,7 @@
 			"app-header": Header,
 			"app-hero": Hero,
 			"app-services": Services,
+			"app-payments": Payments,
 			"app-phone": Phone,
 			"app-mail": Mail,
 			"app-slider": Slider,
