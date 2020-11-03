@@ -15,7 +15,7 @@
             <b-image
               v-if="card.cardImg"
               class="img-smjestaj"
-              :src="require(`@/assets/img-new/cards/${card.cardImg}`)"
+              :src="img_url + card.cardImg"
               webp-fallback=".png"
             ></b-image>
             <h3 v-if="card.cardName" class="is-size-4 has-text-centered">
@@ -35,20 +35,20 @@
     data() {
       return {
         cards: [],
-        // columns: [
-        //   {
-        //     rates: "2-12",
-        //     cards: [
-        //       {
-        //         cardImg: "raiffeisenmastercard.webp",
-        //         cardName: "Raiffeisen bank, MasterCard, Visa",
-        //       },
-        //     ],
-        //   },
-        //   { rates: "2-24" },
-        //   { rates: "2-36" },
-        //   { rates: "24-60" },
-        // ],
+        columns: [
+          {
+            rates: "2-12",
+            "2-12": [
+              {
+                cardImg: "raiffeisenmastercard.webp",
+                cardName: "Raiffeisen bank, MasterCard, Visa",
+              },
+            ],
+          },
+          { rates: "2-24" },
+          { rates: "2-36" },
+          { rates: "24-60" },
+        ],
       };
     },
 
@@ -80,4 +80,3 @@
     margin: 0 auto;
   }
 </style>
-
