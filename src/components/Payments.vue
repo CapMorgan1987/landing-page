@@ -5,13 +5,13 @@
       <div class="columns is-mobile">
         <div
           class="column arena-background text-white px-5 mx-3"
-          v-for="(c, i) in columns"
+          v-for="(c, i) in cards"
           :key="i"
         >
           <h2 class="is-size-2 is-size-3-touch has-text-centered">
             {{ c.rates }}
           </h2>
-          <div v-for="(card, i) in c.cards" :key="i">
+          <div v-for="(card, i) in c.cardsInfo" :key="i">
             <b-image
               v-if="card.cardImg"
               class="img-smjestaj"
@@ -29,88 +29,48 @@
 </template>
 
 <script>
-  // import api from '@/plugins/axios';
+  import api from '@/plugins/axios';
 
   export default {
     data() {
       return {
-        // columns: [],
-        columns: [
-          {
-            rates: '2-12 rata',
-            cards: [
-              {
-                cardImg: 'raiffeisenmastercard.webp',
-                cardName: 'Raiffeisen bank, MasterCard, Visa',
-              },
-              {
-                cardImg: 'erstemaestro.webp',
-                cardName: 'Erste Plus',
-              },
-            ],
-          },
-          {
-            rates: '2-24 rate',
-            cards: [
-              {
-                cardImg: 'zagrebackamaestro.webp',
-                cardName: 'Zagrebačka banka, Maestro',
-              },
-              {
-                cardImg: 'visapremium.webp',
-                cardName: 'Visa Premium',
-              },
-            ],
-          },
-          {
-            rates: '2-36 rata',
-            cards: [
-              {
-                cardImg: 'pbz.webp',
-                cardName: 'PBZ Visa Inspire, Maestro',
-              },
-              {
-                cardImg: 'mastercard.webp',
-                cardName: 'Zagrebačka banka MasterCard, Visa',
-              },
-              {
-                cardImg: 'diners.webp',
-                cardName: 'Diners',
-              },
-            ],
-          },
-          {
-            rates: '24-60 rata',
-            cards: [
-              {
-                cardImg: 'visapremium.webp',
-                cardName: 'Visa Premium potrošački kredit',
-              },
-            ],
-          },
-        ],
+        cards: [],
+        // columns: [
+        //   {
+        //     rates: "2-12",
+        //     cards: [
+        //       {
+        //         cardImg: "raiffeisenmastercard.webp",
+        //         cardName: "Raiffeisen bank, MasterCard, Visa",
+        //       },
+        //     ],
+        //   },
+        //   { rates: "2-24" },
+        //   { rates: "2-36" },
+        //   { rates: "24-60" },
+        // ],
       };
     },
 
-    //   methods: {
-    //     getCards() {
-    //       api
-    //         .get('15c3f4b1-4d6c-42ee-b2fa-d7ee861f1f25')
-    //         .then((response) => {
-    //           this.columns = response.data.columns;
-    //         })
-    //         .catch((error) => {
-    //           this.$buefy.toast.open({
-    //             message: 'Error: ' + error,
-    //             type: 'is-danger',
-    //           });
-    //         });
-    //     },
-    //   },
+    methods: {
+      getCards() {
+        api
+          .get('0eb66d2d-344e-4264-abb2-abddf47e2324')
+          .then((response) => {
+            this.cards = response.data.cards;
+          })
+          .catch((error) => {
+            this.$buefy.toast.open({
+              message: 'Error: ' + error,
+              type: 'is-danger',
+            });
+          });
+      },
+    },
 
-    //   created() {
-    //     this.getCards();
-    //   },
+    created() {
+      this.getCards();
+    },
   };
 </script>
 
@@ -120,3 +80,4 @@
     margin: 0 auto;
   }
 </style>
+
