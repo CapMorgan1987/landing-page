@@ -2,7 +2,7 @@
   <section class="px-5 pb-5">
     <div class="container">
       <h2 class="is-size-2 has-text-centered my-5">DOSTUPNI NAČINI PLAĆANJA</h2>
-      <div class="columns is-mobile">
+      <div class="columns is-desktop">
         <div
           class="column arena-background text-white px-5 mx-3"
           v-for="(c, i) in cards"
@@ -76,7 +76,7 @@
 
 <style scoped>
   .img-smjestaj {
-    width: 222px;
+    max-width: 222px;
     margin: 0 auto;
   }
 </style>
