@@ -4,7 +4,7 @@
       <div class="columns is-vcentered is-desktop">
         <div class="column is-half-fullhd px-5">
           <h1 class="is-size-2-tablet is-size-2-mobile font400">
-            {{ title }}
+            {{ data.title }}
           </h1>
           <h3 class="is-size-3-tablet is-size-2-mobile mb-6">
             {{ subtitle }}
@@ -13,7 +13,7 @@
             }}</span>
           </h3>
           <div class="mb-3 px-5">
-            <div v-for="(ct, i) in checkText" :key="i" class="dflex">
+            <div v-for="(ct, i) in data.checkText" :key="i" class="dflex">
               <b-image
                 v-if="checkImg"
                 class="icon-header"
@@ -44,6 +44,7 @@
   export default {
     data() {
       return {
+        data: {},
         title: '',
         subtitle: '',
         greenSubtitle: '',
@@ -59,6 +60,7 @@
         api
           .get('c54ee49d-c1e2-4122-a0a5-0f476ce04577')
           .then((response) => {
+            this.data = response.data
             this.title = response.data.title;
             this.subtitle = response.data.subtitle;
             this.greenSubtitle = response.data.greenSubtitle;
