@@ -55,7 +55,7 @@
     methods: {
       getCards() {
         api
-          .get('0eb66d2d-344e-4264-abb2-abddf47e2324')
+          .get('72063611-c02f-453a-b33a-8f4c9acfa0af')
           .then((response) => {
             this.cards = response.data.cards;
           })

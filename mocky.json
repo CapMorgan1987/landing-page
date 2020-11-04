@@ -1,3 +1,13 @@
 {
-      "logo": "logo.webp"
+      "title": "PROTEZA NA PREČKU",
+      "subtitle": "već od",
+      "greenSubtitle": "560kn mjesečno*",
+      "checkImg": "check.webp",
+      "checkText": [
+          {"text": "BESPLATAN specijalistički pregled"},
+          {"text": "NEOBAVEZUJUĆA ponuda"},
+          {"text": "BESKAMATNO obročno plaćanje"}
+      ],
+      "btnText": "KONTAKTIRAJTE NAS",
+      "infoText": "*cijena od 560kn mjesečno je okvirna cijena 4 implantata i proteze. Individualizirani plan terapije biti će izrađen tijekom specijalističkog pregleda"
 }

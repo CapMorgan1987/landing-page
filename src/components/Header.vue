@@ -24,7 +24,7 @@
     methods: {
       getLogo() {
         api
-          .get('ce21f04d-35f0-4fbb-83cb-45089d127d4a')
+          .get('751691c6-0af5-4c95-9df1-df7f707d7f0d')
           .then((response) => {
             this.logo = response.data.logo;
           })
