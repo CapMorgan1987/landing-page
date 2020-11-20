@@ -1,4 +1,9 @@
 {
-        "btnText": "DOGOVORITE BESPLAN PREGLED"
-
+      "headerText": "ZATRAŽITE BESPLATAN SPECIJALISTIČKI PREGLED",
+      "mailPlaceholder": "E-mail",
+      "numberPlaceholder": "Numero",
+      "messagePlaceholder": "Scrivi il messaggio....",
+      "termsText": "on l'invio dei dati tramite questo modulo di contatto, permetto al Policlinico odontoiatrico ARENA di contattarmi riguardando la mia richiesta e di usare i miei dati personali raccolti di trattarli in avanti, in concordanza con la",
+      "newsletterText": "Voglio ricevere delle informazioni sulle offerte e sugli sconti.",
+      "btnText": "Mandami un preventivo"
 }

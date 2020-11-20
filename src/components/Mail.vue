@@ -3,10 +3,11 @@
     <div class="container">
       <div class="columns is-vcentered is-desktop">
         <div class="column is-half-desktop px-5 py-5 has-background-white-ter">
+          <h3>{{ data.headerText }}</h3>
           <b-field>
             <b-input
               v-model="name"
-              placeholder="Nome e Cognome"
+              :placeholder="[[data.namePlaceholder]]"
               required
             ></b-input>
           </b-field>
@@ -14,35 +15,35 @@
             <b-input
               v-model="email"
               type="email"
-              placeholder="E-mail"
+              :placeholder="[[data.mailPlaceholder]]"
               required
             ></b-input>
           </b-field>
           <b-field>
-            <b-input v-model="tel" placeholder="Telefono" required></b-input>
+            <b-input
+              v-model="tel"
+              :placeholder="[[data.numberPlaceholder]]"
+              required
+            ></b-input>
           </b-field>
           <b-field>
             <b-input
               v-model="message"
-              placeholder="Scrivi il messaggio...."
+              :placeholder="[[data.messagePlaceholder]]"
               maxlength="200"
               type="textarea"
               required
             ></b-input>
           </b-field>
           <div class="field">
-            <b-checkbox v-model="terms" type="is-success" required
-              >Con l'invio dei dati tramite questo modulo di contatto, permetto
-              al Policlinico odontoiatrico ARENA di contattarmi riguardando la
-              mia richiesta e di usare i miei dati personali raccolti di
-              trattarli in avanti, in concordanza con la</b-checkbox
-            >
+            <b-checkbox v-model="terms" type="is-success" required>{{
+              data.termsText
+            }}</b-checkbox>
           </div>
           <div class="field">
-            <b-checkbox v-model="newsletter" type="is-success"
-              >Voglio ricevere delle informazioni sulle offerte e sugli
-              sconti.</b-checkbox
-            >
+            <b-checkbox v-model="newsletter" type="is-success">{{
+              data.newsletterText
+            }}</b-checkbox>
           </div>
           <div>
             <b-button
@@ -56,7 +57,7 @@
                 message === ''
               "
               @click="send()"
-              >Mandami un preventivo</b-button
+              >{{ data.btnText }}</b-button
             >
           </div>
         </div>
@@ -72,6 +73,7 @@
   export default {
     data() {
       return {
+        data: {},
         name: '',
         email: '',
         tel: '',
@@ -82,9 +84,22 @@
     },
 
     methods: {
+      getText() {
+        api
+          .get('9c99f601-c986-4768-8863-c97324610f8c')
+          .then((response) => {
+            this.data = response.data;
+          })
+          .catch((error) => {
+            this.$buefy.toast.open({
+              message: 'Error: ' + error,
+              type: 'is-danger',
+            });
+          });
+      },
       send() {
         api
-          .post('d6d81a8d-1048-41f2-9ab7-4489ffd05b95', {
+          .post('9c99f601-c986-4768-8863-c97324610f8c', {
             name: this.name,
             email: this.email,
             tel: this.tel,
@@ -93,7 +108,7 @@
           })
           .then((response) => {
             this.$buefy.toast.open({
-              message: response.data.message,
+              message: response.data.mailSent,
               type: 'is-success',
             });
           })
@@ -105,14 +120,15 @@
           });
       },
     },
+    created() {
+      this.getText();
+    },
   };
 </script>
 
 <style scoped>
   .back-img {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-      url('../assets/img/mailback.webp');
-    background-color: black;
+    background-image: url('../assets/img-new/testimonial.webp');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: bottom right;
