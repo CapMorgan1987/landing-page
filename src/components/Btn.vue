@@ -2,7 +2,7 @@
   <section class="px-5 py-5">
     <div class="container has-text-centered">
       <b-button tag="a" href="#maildiv" class="btn-big">
-        {{ btnText }}
+        {{ this.btnText }}
       </b-button>
     </div>
   </section>
@@ -49,7 +49,6 @@
     background-color: #8bc63f;
     color: white;
     transition-duration: 500ms;
-    height: 1.8em !important;
   }
 
   .btn-big:hover {
@@ -60,5 +59,15 @@
     background-color: white;
     color: #8bc63f;
     transition-duration: 500ms;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .btn-big {
+      width: 100%;
+      font-size: 24px;
+      height: auto;
+      white-space: normal;
+      padding: 10px;
+    }
   }
 </style>
