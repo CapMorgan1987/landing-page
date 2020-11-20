@@ -1,9 +1,11 @@
 {
       "headerText": "ZATRAŽITE BESPLATAN SPECIJALISTIČKI PREGLED",
+      "namePlaceholder": "Ime i prezime",
       "mailPlaceholder": "E-mail",
-      "numberPlaceholder": "Numero",
-      "messagePlaceholder": "Scrivi il messaggio....",
-      "termsText": "on l'invio dei dati tramite questo modulo di contatto, permetto al Policlinico odontoiatrico ARENA di contattarmi riguardando la mia richiesta e di usare i miei dati personali raccolti di trattarli in avanti, in concordanza con la",
-      "newsletterText": "Voglio ricevere delle informazioni sulle offerte e sugli sconti.",
-      "btnText": "Mandami un preventivo"
+      "numberPlaceholder": "Telefon",
+      "messagePlaceholder": "Opišite svoj problem",
+      "termsText": "Slanjem podataka putem ove kontakt forme, dozvoljavam da me Stomatološka poliklinika ARENA kontaktira u vezi mog upita, a moje prikupljene osobne podatke koristi i obrađuje dalje, sukladno Izjavi o povjerljivosti",
+      "newsletterText": "Želim primati obavijesti o ponudama i popustima.",
+      "btnText": "Pošalji",
+      "mailSent": "Poruka poslana!"
 }
