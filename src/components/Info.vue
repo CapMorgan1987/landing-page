@@ -2,12 +2,12 @@
   <section class="px-5 py-5">
     <div class="container">
       <div class="columns is-vcentered is-desktop">
-        <div class="column is-half-desktop">
-          <b-image
-            v-if="infoimage"
+        <div class="column is-half-desktop" :style="bg">
+          <!-- <b-image
+            v-if="data.infoImage"
             :src="img_url + data.infoImage"
             webp-fallback=".jpg"
-          ></b-image>
+          ></b-image> -->
         </div>
         <div class="column is-half-desktop px-5 py-5">
           <p class="mb-2">
@@ -53,10 +53,16 @@
       };
     },
 
+    computed: {
+      bg() {
+        return `background: url(${this.img_url + this.data.infoImage})`
+      }
+    },
+
     methods: {
       getInfo() {
         api
-          .get('45b2f6ed-1a8d-4146-939e-6b8484d41b74')
+          .get('c6dfdd1e-59b4-4bcf-b3c2-ab4449a72014')
           .then((response) => {
             this.data = response.data;
           })
@@ -66,7 +72,7 @@
               type: 'is-danger',
             });
           });
-      },
+      }
     },
 
     created() {
