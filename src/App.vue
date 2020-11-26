@@ -5,7 +5,7 @@
     <app-services />
     <app-payments />
     <app-mail />
-    <app-slider />
+    <app-info />
     <app-banner />
     <app-transport />
     <app-btn />
@@ -19,7 +19,7 @@
   import Payments from './components/Payments.vue';
   import Button from './components/Btn.vue';
   import Mail from './components/Mail.vue';
-  import Slider from './components/Slider.vue';
+  import Info from './components/Info.vue';
   import Banner from './components/Banner.vue';
   import Transport from './components/Transport.vue';
 
@@ -32,7 +32,7 @@
       'app-payments': Payments,
       'app-btn': Button,
       'app-mail': Mail,
-      'app-slider': Slider,
+      'app-info': Info,
       'app-banner': Banner,
       'app-transport': Transport,
     },
